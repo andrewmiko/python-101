@@ -41,7 +41,7 @@ The primary purpose of this repository is to:
 To get started with the lectures:
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/python-101.git
+   git clone https://github.com/andrewmiko/python-101.git
    ```
 2. **Navigate to the lecture of interest:**
    ```bash
