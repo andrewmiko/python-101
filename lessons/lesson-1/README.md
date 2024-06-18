@@ -11,6 +11,7 @@
     - **Variables:** What they are and how to use them.
     - **Data Types:** Strings, integers, floating-point numbers, boolean values.
     - **Operators:** Arithmetic, logical, comparison.
+    - **Type Casting:** Converting one type to another.
 
 2. **Interpreted and Compiled Languages:**
     - What is an interpreted language.
@@ -57,6 +58,42 @@ year = 2023                # integer
 temperature = 36.6         # floating-point number
 is_open = False            # boolean value
 ```
+
+**String Methods:**
+
+1. `upper()`: Converts all characters to uppercase.
+    ```python
+    message = "hello"
+    print(message.upper())  # HELLO
+    ```
+
+2. `lower()`: Converts all characters to lowercase.
+    ```python
+    message = "HELLO"
+    print(message.lower())  # hello
+    ```
+
+3. `strip()`: Removes whitespace from both ends.
+    ```python
+    message = "   hello   "
+    print(message.strip())  # hello
+    ```
+
+4. `replace()`: Replaces a substring with another substring.
+    ```python
+    message = "hello world"
+    print(message.replace("world", "Python"))  # hello Python
+    ```
+
+5. `split()`: Splits the string into a list.
+    ```python
+    message = "hello world"
+    print(message.split())  # ['hello', 'world']
+    ```
+
+**Boolean Methods:**
+
+Booleans do not have specific methods, but they are used in logical operations and conditions.
 
 #### Operators
 
@@ -120,6 +157,77 @@ is_open = False            # boolean value
     print(a < b)   # True
     print(a >= b)  # False
     print(a <= b)  # True
+    ```
+
+#### Type Casting
+
+**What is type casting?**
+
+Type casting is converting one data type to another. It is useful for ensuring that operations are performed with compatible types.
+
+**Examples:**
+
+1. **String to Integer:**
+
+    ```python
+    num_str = "100"
+    num_int = int(num_str)
+    print(num_int)  # 100
+    print(type(num_int))  # <class 'int'>
+    ```
+
+2. **Integer to String:**
+
+    ```python
+    num_int = 100
+    num_str = str(num_int)
+    print(num_str)  # "100"
+    print(type(num_str))  # <class 'str'>
+    ```
+
+3. **String to Float:**
+
+    ```python
+    float_str = "10.5"
+    float_num = float(float_str)
+    print(float_num)  # 10.5
+    print(type(float_num))  # <class 'float'>
+    ```
+
+4. **Float to Integer:**
+
+    ```python
+    float_num = 10.5
+    int_num = int(float_num)
+    print(int_num)  # 10
+    print(type(int_num))  # <class 'int'>
+    ```
+
+5. **Integer to Float:**
+
+    ```python
+    int_num = 10
+    float_num = float(int_num)
+    print(float_num)  # 10.0
+    print(type(float_num))  # <class 'float'>
+    ```
+
+6. **Boolean to Integer:**
+
+    ```python
+    bool_val = True
+    int_val = int(bool_val)
+    print(int_val)  # 1
+    print(type(int_val))  # <class 'int'>
+    ```
+
+7. **Integer to Boolean:**
+
+    ```python
+    int_val = 0
+    bool_val = bool(int_val)
+    print(bool_val)  # False
+    print(type(bool_val))  # <class 'bool'>
     ```
 
 ### Interpreted and Compiled Languages
