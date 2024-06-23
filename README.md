@@ -59,70 +59,78 @@ To get started with the lessons:
   - Installing Python and setting up the development environment
   - Writing and running the first Python program
 
-### Lesson 2: Working with Loops
-- **Objective:** Understand and apply loops in Python
-- **Topics Covered:**
-  - For and while loops
-  - Range function and loop applications
-  - Looping through different data types
-
-### Lesson 3: Functions
-- **Objective:** Learn to define and use functions in Python
-- **Topics Covered:**
-  - Defining and calling functions
-  - Function parameters and scope
-  - Common errors and troubleshooting
-
-### Lesson 4: Lambda Functions and Functional Programming
-- **Objective:** Understand lambda functions and basic functional programming
-- **Topics Covered:**
-  - Lambda expressions
-  - Functional programming concepts
-  - Using map, filter, and reduce
-
-### Lesson 5: Data Collections
+### Lesson 2: Data Collections
 - **Objective:** Work with different data collections in Python
 - **Topics Covered:**
   - Dictionaries, lists, tuples, and sets
   - Manipulating and iterating over collections
   - Practical examples
 
-### Lesson 6: Recursion
+### Lesson 3: Working with Loops
+- **Objective:** Understand and apply loops in Python
+- **Topics Covered:**
+  - For and while loops
+  - Range function and loop applications
+  - Looping through different data types
+
+### Lesson 4: Working with If-Else Statements
+- **Objective:** Understand and apply if-else statements in Python.
+- **Topics Covered:**
+  - Basic if-else structure.
+  - Nested if-else statements.
+  - Using if-else with different data types.
+  - Examples and common use cases.
+
+### Lesson 5: Functions
+- **Objective:** Learn to define and use functions in Python
+- **Topics Covered:**
+  - Defining and calling functions
+  - Function parameters and scope
+  - Common errors and troubleshooting
+
+### Lesson 6: Lambda Functions and Functional Programming
+- **Objective:** Understand lambda functions and basic functional programming
+- **Topics Covered:**
+  - Lambda expressions
+  - Functional programming concepts
+  - Using map, filter, and reduce
+  
+### Lesson 7: Recursion
 - **Objective:** Understand and apply recursion in problem-solving
 - **Topics Covered:**
   - What is recursion
   - Recursive function examples
   - When and how to use recursion
 
-### Lesson 7: Exception Handling
+### Lesson 8: Exception Handling
 - **Objective:** Learn to handle exceptions in Python
 - **Topics Covered:**
   - Try and except blocks
   - Handling different types of exceptions
   - Writing robust code
 
-### Lesson 8: Object-Oriented Programming (OOP)
+### Lesson 9: Object-Oriented Programming (OOP)
 - **Objective:** Introduce the principles of OOP and how to apply them in Python
 - **Topics Covered:**
   - Classes and objects
   - Methods and self
   - Inheritance and polymorphism
 
-### Lesson 9: Multithreading and Multiprocessing
+### Lesson 10: Multithreading and Multiprocessing
 - **Objective:** Understand concurrency and parallelism in Python
 - **Topics Covered:**
   - Introduction to concurrency
   - Using threading and multiprocessing modules
   - Examples and best practices
 
-### Lesson 10: File Handling and Pandas
+### Lesson 11: File Handling and Pandas
 - **Objective:** Learn to work with files and perform data analysis with pandas
 - **Topics Covered:**
   - Reading from and writing to files
   - Introduction to the pandas library
   - Data manipulation and analysis with pandas
 
-### Lesson 11: Problem Solving and Optimization
+### Lesson 12: Problem Solving and Optimization
 - **Objective:** Develop problem-solving skills and optimize code
 - **Topics Covered:**
   - Approaching problem-solving
