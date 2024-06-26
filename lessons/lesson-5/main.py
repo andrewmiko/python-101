@@ -124,6 +124,7 @@ new_mode = False
 new_mode = True if not new_mode else False
 print(new_mode)
 
+
 def toggle_mode():
     global mode
     # mode = 1 if not mode else 0
@@ -137,14 +138,14 @@ print(mode)
 toggle_mode()
 print(mode)
 
-
-
 GLOBAL_MODE = 0
+
 
 def toggle_mode(mode):
     # mode = 1 + 1 tak ne pisatj
     result = 1 if not mode else 0
     return result
+
 
 print(GLOBAL_MODE)
 new_mode = toggle_mode(GLOBAL_MODE)
