@@ -1,7 +1,13 @@
-# generators ->
-
 # partials ->
 # decorators time complexity (time spent for factorial)
+# map, factorial, decorator
+
+# generators -> yeild return dict random.randit, key = value
+# random.randit(1, 100) => 1, 99
+# function to count values ...
+# count how much keys(unique) or values are even or odd
+# count how much values are there >= 20
+# count how much values are == 2
 
 # threads ->
 # rlocks?
