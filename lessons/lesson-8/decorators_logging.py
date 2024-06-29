@@ -1,19 +1,19 @@
 """
 Implementing and Using Decorators with Logging Execution Time and Word Count Function
 
-1. Create a decorator to log execution time and debug information:
- - Define a decorator function debug that logs the time taken by the decorated function to execute and prints useful debug information.
+1. Create a decorator to print execution time and print debug information:
+ - Define a decorator function `debug` that logs the time taken by the decorated function to execute and prints function name, args, and kwargs information.
 
 2. Create a function to count the number of symbols in a given text using the decorator:
- - Define a function count_symbols that takes a string of text and returns the number of symbols in it.
- - Decorate this function with debug to log the execution time and debug information.
+ - Define a function `count_symbols` that takes a string of text and returns the number of symbols in it.
+ - Decorate this function with `debug` to log the execution time and debug information.
 
 3. Map the decorated function over a given list of texts:
  - Create a list of text strings.
  - Use the map function to apply the decorated count_symbols function to each text in the list.
 
 4. Assign result to check for correct values:
- - Assign result to SYMBOLS_COUNTS
+ - Assign your result to `SYMBOLS_COUNTS`
 """
 
 TEXTS = [
@@ -56,8 +56,53 @@ RESULT = [
 SYMBOLS_COUNTS = []
 
 # Step 1: Define the decorator to log execution time and debug information
+
+#from abc import _FuncT
+import time
+
+
+def debug(func):
+
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        result = func(*args, **kwargs)
+        end = time.time()
+        overall_time = end - start
+        print(overall_time, {func}, {args}, {**kwargs})
+        return result
+
+    return wrapper
+
+
 # Step 2: Create a function to count the number of words in a given text and apply the debug decorator
+
+
+@debug
+def count_symbols(text):
+    # text => 'To give anything less than your best, is to sacrifice the gift'
+    # len(text) = 62
+    # return len(text)
+    count = 0
+    for i in text:
+        count += 1
+    return count
+
+
 # Step 3: Using map to apply the decorated function to each text
+# Step 4: Assign map result to `SYMBOLS_COUNTS` variable check for correct values
+
+SYMBOLS_COUNTS = list(map(count_symbols, TEXTS))
+"""
+map(count_symbols, TEXTS) =>
+for text in TEXTS:
+    text => 'To give anything less than your best, is to sacrifice the gift'
+    return count_symbols(text)
+"""
+"""
+4.76837158203125e-07 {<function count_symbols at 0x740c07bad940>} {('To give anything less than your best, is to sacrifice the gift',)} {}
+"""
+
+# print(count_symbols(TEXTS))
 
 # DO NOT TOUCH!
 print()
