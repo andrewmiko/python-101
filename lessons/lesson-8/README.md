@@ -140,3 +140,96 @@ print(result)  # Output: 6
 - **Partial Application**: A specific use case where you fix a certain number of arguments of a function, creating a new function that takes the remaining arguments.
 
 Currying is useful in functional programming for creating higher-order functions and enabling more modular code. Partial application, which can be achieved with tools like `functools.partial` in Python, allows you to fix some arguments of a function and create simpler, reusable functions.
+
+## Closures
+
+#### Definition
+A **closure** is a function that retains access to the variables and scope in which it was created, even after the outer function has finished executing. Closures are created by defining an inner function within an outer function and returning the inner function. The inner function will have access to the variables and scope of the outer function, even after the outer function has completed.
+
+#### Key Characteristics
+- **Encapsulation**: Closures help in data hiding by encapsulating the variables within the outer function, providing a controlled access mechanism through the inner function.
+- **Persistence**: Variables defined in the outer function remain in memory between calls to the inner function.
+
+### Example and Explanation
+
+Consider a function that creates and returns a function to add a specific number to its input.
+
+#### Step-by-Step Example
+
+##### Step 1: Define the outer function
+- The outer function `make_adder` takes one argument `n`.
+
+```python
+def make_adder(n):
+    def adder(x):
+        return x + n
+    return adder
+```
+
+##### Step 2: Create an instance of the closure
+- Call the `make_adder` function with a specific value to create a closure.
+
+```python
+add_five = make_adder(5)
+```
+
+##### Step 3: Use the closure
+- Call the inner function through the closure.
+
+```python
+print(add_five(10))  # Output: 15
+```
+
+### Explanation of the Example
+
+1. **Outer Function**:
+   - `make_adder` is the outer function that takes a single argument `n`.
+   - Inside `make_adder`, an inner function `adder` is defined which takes another argument `x` and returns `x + n`.
+
+2. **Returning the Inner Function**:
+   - `make_adder` returns the inner function `adder`, creating a closure.
+   - The returned function `adder` retains access to the variable `n` from the outer function's scope.
+
+3. **Using the Closure**:
+   - When `make_adder(5)` is called, it returns a new function `adder` that adds 5 to its input.
+   - This returned function is stored in `add_five`.
+   - Calling `add_five(10)` executes the inner function `adder` with `x = 10`, which uses the retained `n = 5` from the outer function's scope, resulting in `10 + 5 = 15`.
+
+### Practical Use Cases
+
+#### 1. **Data Encapsulation**:
+Closures can be used to encapsulate data and provide controlled access to it.
+
+```python
+def make_counter():
+    count = 0
+    def counter():
+        nonlocal count
+        count += 1
+        return count
+    return counter
+
+counter1 = make_counter()
+print(counter1())  # Output: 1
+print(counter1())  # Output: 2
+```
+
+#### 2. **Factory Functions**:
+Closures can be used to create factory functions that generate customized functions.
+
+```python
+def make_multiplier(factor):
+    def multiplier(x):
+        return x * factor
+    return multiplier
+
+times_three = make_multiplier(3)
+print(times_three(10))  # Output: 30
+```
+
+### Summary
+- A closure is created by defining an inner function within an outer function and returning the inner function.
+- Closures retain access to the variables and scope of the outer function even after the outer function has finished executing.
+- They are useful for data encapsulation and creating factory functions.
+
+Closures are a powerful feature in Python, enabling advanced programming techniques and helping to maintain clean and modular code.
