@@ -51,6 +51,8 @@ print(convert(0, "C"))  # => 32.0 in F
 
 # f_to_c = partial(func, args, kwargs)
 f_to_c = partial(convert, target_unit="F")
+# f_to_c = convert('F')
+# f_to_c(32)
 print(f_to_c(32))
 
 c_to_f = partial(convert, target_unit="C")

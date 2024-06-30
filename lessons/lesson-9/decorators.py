@@ -17,3 +17,34 @@ Expected Output:
 Execution time: 0.0 seconds
 Factorial of 6 is 720
 """
+
+import time
+
+
+def decorator(func):
+
+    def wrapper(*args, **kwargs):
+        start = time.time()
+
+        result = func(*args, **kwargs)
+        end = time.time()
+
+        overal_time = end - start
+        print("Execution time:", overal_time, "seconds")
+        return result
+
+    return wrapper
+
+
+@decorator
+def factorial(n):
+    factorial = 1
+    for i in range(1, n + 1):
+        factorial = factorial * i
+        #something = ("Factorial of",n,"is", factorial)
+    return factorial
+
+
+x = 6
+print(f"Factorial of {x} is: {factorial(x)}")
+# print("Factorial of",x,"is", factorial(x))

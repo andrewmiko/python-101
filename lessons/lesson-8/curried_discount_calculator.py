@@ -53,25 +53,41 @@ PRICES_DICSOUNT_RESULT = []
 
 # Step 1: Define the curried function to calculate discounted price with dynamic discount
 
+
 def apply_discount(base_discount):
-      def discount_applier(price):   
-            
-            if price > 100:
-               base_discount += 5 
-            discounted_price = price - (price * (base_discount / 100))  
-            return "sss"
-            #print("ff", discounted_price)
+   # base_discount = 10
+   def discount_applier(price):
+      # total_discount = base_discount
+      total_discount = base_discount
+      if price > 100:
+         # total_discount += 5
+         total_discount += 5
+      discounted_price = price - (price * (total_discount / 100))
+      return discounted_price
+
+   return discount_applier
 
 
-            
-      
+# apply_10_percent_discount = apply_discount(10)
+# print(apply_10_percent_discount(90))
+# print(apply_10_percent_discount(115))
+
+# def apply_discount(base_discount):
+#       def discount_applier(price):
+#          if price > 100:
+#             base_discount += 5
+#          discounted_price = price - (price * (total_discount / 100))
+#          return "sss"
+#             #print("ff", discounted_price)
 
 # Step 2: Create a curried function to apply a fixed base discount
 
-apply_10_percent_discount = apply_discount(450)
-print(apply_10_percent_discount)
+apply_10_percent_discount = apply_discount(10)
+#print(apply_10_percent_discount)
 
 # Step 3: Create a list of prices and map the new curried function over it
+
+PRICES_DICSOUNT_RESULT = list(map(apply_10_percent_discount, PRICES))
 
 # DO NOT TOUCH!
 print()

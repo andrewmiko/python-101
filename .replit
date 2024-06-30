@@ -1,10 +1,10 @@
 modules = ["python-3.12"]
-run = "python lessons/lesson-9/lists.py"
+# run = "python lessons/lesson-9/lists.py"
 # run = "python lessons/lesson-9/dicts.py"
 # run = "python lessons/lesson-9/maps_and_filters.py"
 # run = "python lessons/lesson-9/generators.py"
 # run = "python lessons/lesson-9/decorators.py"
-# run = "python lessons/lesson-9/partials.py"
+run = "python lessons/lesson-9/partials.py"
 # run = "python lessons/lesson-9/lambdas.py"
 # run = "python lessons/lesson-9/randoms.py"
 

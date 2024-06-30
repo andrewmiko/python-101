@@ -17,3 +17,24 @@ The cube of 3 is 27
 The cube of 4 is 64
 The cube of 5 is 125
 """
+from functools import partial
+
+
+def pow_function(something, power):
+    #n = None
+    return something**power
+
+
+partial_func = partial(pow_function, power=3)
+
+#print(partial_func())
+
+for i in range(1, 6):
+    # 1, 2..5
+    print(i, partial_func(i))  # 3 => 27
+
+# a = dict.keys()
+# print(a)
+
+# if key in a:
+# print(key, "exists")
