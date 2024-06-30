@@ -55,15 +55,22 @@ PRICES_DICSOUNT_RESULT = []
 
 def apply_discount(base_discount):
       def discount_applier(price):   
-            result = None
+            
             if price > 100:
-                  price += 5 
-            result = price - (price * (total_discount / 100))  
-         
+               base_discount += 5 
+            discounted_price = price - (price * (base_discount / 100))  
+            return "sss"
+            #print("ff", discounted_price)
+
+
             
       
 
 # Step 2: Create a curried function to apply a fixed base discount
+
+apply_10_percent_discount = apply_discount(450)
+print(apply_10_percent_discount)
+
 # Step 3: Create a list of prices and map the new curried function over it
 
 # DO NOT TOUCH!
